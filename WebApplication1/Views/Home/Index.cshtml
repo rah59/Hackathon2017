@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>2017 UMKC Hackathon - Team RooBots</h1>
+    <p class="lead">This app is designed and developed to support a Hackathon submission by Team RooBots.</p>
+    @if (Request.IsAuthenticated)
+    {
+        <p>Welcome, @(ViewBag.UserName)!</p>
+    }
+    else
+    {
+        <p><a href="@Url.Action("SignIn", "Home", null, Request.Url.Scheme)" class="btn btn-primary btn-lg">Click here to login</a></p>
+    }
+</div>
+@*rah59@mail.umkc.edu*@
